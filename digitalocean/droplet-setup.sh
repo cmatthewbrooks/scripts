@@ -290,6 +290,7 @@ else
     warn "ufw OpenSSH app profile not found; allowing 22/tcp directly."
     run ufw allow 22/tcp
 fi
+run ufw allow 60000:61000/udp
 run ufw --force enable
 
 # SSH hardening, opt-in via -S.
